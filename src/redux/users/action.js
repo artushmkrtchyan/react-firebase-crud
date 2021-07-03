@@ -141,7 +141,7 @@ export const deleteUser = (id) => {
     service
       .deleteUser(id)
       .then(() => {
-        dispatch(getUsers());
+        // dispatch(getUsers()); // Case get data once.
         dispatch(deleteUserSuccess());
       })
       .catch((e) => {
